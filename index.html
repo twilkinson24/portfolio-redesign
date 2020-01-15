@@ -12,39 +12,86 @@
 <link rel="shortcut icon" href="{{ URL::asset('./img/logo/icon.ico') }}" type="image/x-icon">
  
    <!-- Google Fonts -->
-   <link href='https://fonts.googleapis.com/css?family=Kalam|Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Kalam|Muli|Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
     <!-- styles -->
    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <!-- Nav -->
-    <nav class="container flex space-between">
-        <div class="site-title">
-            <h1 class="nav-site-title">Taylor Wilkinson</h1>
+    <header>
+        <nav class="container flex space-between">
+            <div class="site-title">
+                <h1 class="nav-site-title">taylor wilkinson</h1>
+            </div>
+            <ul class="flex nav-links">
+                <li class="nav-link flex">
+                    <a href="#">
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-link flex">
+                    <a href="#">
+                        About
+                    </a>
+                </li>
+                <li class="nav-link flex">
+                    <a href="#">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-link flex">
+                    <a href="#">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>  
+    <main>
+        <div class="container">
+            <section class="welcome-wrapper flex space-between">
+                <div class="landing-text flex">
+                    <h2>
+                        I'm Taylor,
+                    </h2>
+                    <p>
+                        a freelance web developer from Michigan. <br/>
+                        I'm passionate about the web, and I love finding and building quality solutions for my clients.
+                    </p>
+                    <div class="flex">
+                        <a href="#" class="btn mr">websites i've built</a>
+                        <a href="#" class="btn">work with me</a>
+                    </div>
+                </div>
+                <div class="landing-image">
+                    <img src="./TaylorAvatar-transparent-bg.png" alt="Taylor Wilkinson - Freelance Web Developer">
+                </div>
+            </section>
+
+            <section class="services">
+                <div class="flex services-wrapper">
+                    <div class="services-title text-center">
+                        <img src="clip-art-laptop2.png">
+                    </div>
+                    <div class="services-text">
+                        <h2>i love</h2>
+                        <ul class="indent list-style-none">
+                            <li>
+                                <span class="text-blue">-</span> Front-End Development
+                                
+                            </li>
+                            <li>
+                                <span class="text-blue">-</span> WordPress Development
+                            </li>
+                            <li>
+                                PSD to WordPress
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </section>
         </div>
-        <ul class="flex nav-links">
-            <li class="nav-link flex">
-                <a href="#">
-                    Projects
-                </a>
-            </li>
-            <li class="nav-link flex">
-                <a href="#">
-                    About
-                </a>
-            </li>
-            <li class="nav-link flex">
-                <a href="#">
-                    Contact
-                </a>
-            </li>
-            <li class="nav-link flex">
-                <a href="#">
-                    Blog
-                </a>
-            </li>
-        </ul>
-    </nav>
+    </main>
     
 </body>
 </html>

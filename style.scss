@@ -18,6 +18,7 @@ Maybe try to make a linear gradient for the page going center to give a lil text
   html,
   body {
     scroll-behavior: smooth;
+    height: 100%;
   }
   
   body {
@@ -51,20 +52,31 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Courier New', Courier, monospace;
-    color: #222222;
-    margin: 0;
+    font-family: 'Muli', Helvetica, sans-serif, monospace;
+    color: #0c248f;
+    margin: 0 0 1rem 0;
     padding: 0;
 }
 
 a {
+    color: #ccc;
     text-decoration: none;
-    color: #78A5A3;
 }
 
 p {
     padding: 0;
-    margin: 0;
+    margin: 0 0 1rem 0;
+}
+
+.btn {
+    color: #0c248f;
+    padding: .5rem .8rem;
+    border: 1px solid #0c248f;
+    border-radius: 4px;
+}
+
+section {
+    padding: 5rem 0;
 }
 
 .container {
@@ -97,10 +109,24 @@ p {
     text-align: right;
 }
 
-p.lead {
-    font-size: 1.3rem;
+.text-blue {
+    color: #0c248f;
 }
 
+.list-style-none {
+    list-style-type: none;
+}
+
+.indent {
+    padding-left: 2rem;
+}
+
+.ml {
+    margin-left: 1rem;
+}
+.mr {
+    margin-right: 1rem;
+}
 
 img.img-rounded {
     border-radius: 100%;
@@ -145,6 +171,11 @@ img.img-rounded {
 nav {
     width: 100%;
 
+    .nav-site-title {
+        font-family: 'Muli';
+        margin: 0;
+    }
+
     .nav-links {
         list-style-type: none;
 
@@ -158,8 +189,65 @@ nav {
                 padding: 5px 10px;
 
                 &:hover {
+                    color: #0c248f;
+                }
+            }
+        }
+    }
+}
+main {
+    margin: 5rem 0 2rem;
+
+    .welcome-wrapper {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 0 2rem;
+    
+        .landing-text {
+            max-width: 50%;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: .5rem;
+            }
+            p {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+            }
+        }
+        .landing-image {
+            transform: rotate(5deg);
+
+            img {
+                max-width: 250px;
+            }
+        }
+    }
+
+    .services {
+        max-width: 80%;
+        margin: 0 auto;
+
+        .services-wrapper {
+            justify-content: flex-end;
+
+            .services-title {
+                margin: 0 20% 0 0;
+                flex: 0 1 60%;
+
+                img {
+                    max-width: 250px;
+                }
+
+                h1 {
                     color: #222;
                 }
+            }
+
+            .services-text {
+                flex: 0 1 40%;
             }
         }
     }
