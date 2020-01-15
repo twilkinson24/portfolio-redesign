@@ -21,7 +21,10 @@ body {
 }
 
 body {
-  background: #fff;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(./memphis-mini.png);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(./memphis-mini.png);
+  background-repeat: repeat;
   color: #2f343f;
   /* same as navy, but darker */
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -42,8 +45,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin: 0 0 1.5rem 0;
+}
+
+h1,
+h2 {
+  font-family: 'Gelasio', Helvetica, sans-serif;
 }
 
 h1,
@@ -52,8 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Muli', Helvetica, sans-serif, monospace;
-  color: #0c248f;
+  color: #03104b;
   padding: 0;
 }
 
@@ -61,6 +68,8 @@ h3,
 h4,
 h5,
 h6 {
+  /*   font-family: 'Muli', Helvetica, sans-serif, monospace; */
+  font-family: 'Gelasio', Helvetica, sans-serif;
   margin: 0 0 1rem 0;
 }
 
@@ -121,7 +130,7 @@ section {
 }
 
 .text-blue {
-  color: #0c248f;
+  color: #03104b;
 }
 
 .list-style-none {
@@ -207,7 +216,6 @@ nav {
 }
 
 nav .nav-site-title {
-  font-family: 'Muli';
   margin: 0;
 }
 
@@ -231,7 +239,7 @@ nav .nav-links .nav-link a {
 }
 
 nav .nav-links .nav-link a:hover {
-  color: #0c248f;
+  color: #03104b;
 }
 
 main {
@@ -319,9 +327,13 @@ main .tools {
 main .tools .tool {
   padding: 1rem;
   margin: .5rem;
-  font-weight: bold;
+  /*   font-weight: bold;  */
   white-space: nowrap;
   /*  box-shadow: 0px 1px 1px $color-gray; */
   border-radius: 1px;
+}
+
+footer {
+  padding-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */
