@@ -1,0 +1,180 @@
+/* ===== Media Queries ===== */
+/* xlarge = 1380, large = 1200, medium 1024, small 768, xsmall 480. */
+/**
+
+
+
+Maybe try to make a linear gradient for the page going center to give a lil texture */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: #2f343f;
+  /* same as navy, but darker */
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* ===== Global Styles ===== */
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #78A5A3;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 3rem;
+  height: auto;
+  max-width: 1300px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: .5rem 2rem;
+  }
+}
+
+.page-title {
+  color: #444C5C;
+}
+
+@media only screen and (min-width: 769px) {
+  .page-title {
+    margin: 1rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: right;
+}
+
+p.lead {
+  font-size: 1.3rem;
+}
+
+img.img-rounded {
+  border-radius: 100%;
+}
+
+.section-header {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+}
+
+/* ===== global flex box styles ===== */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .flex-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* ===== Top Navigation Menu ===== */
+nav {
+  width: 100%;
+}
+
+nav .nav-links {
+  list-style-type: none;
+}
+
+nav .nav-links .nav-link {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav .nav-links .nav-link a {
+  display: block;
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+nav .nav-links .nav-link a:hover {
+  color: #222;
+}
+/*# sourceMappingURL=style.css.map */
