@@ -8,6 +8,9 @@
 Maybe try to make a linear gradient for the page going center to give a lil texture */
 
 
+/* ===== Color Variables ====== */
+$color-gray: #444;
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -44,6 +47,7 @@ h1 {
 
 h2 {
     font-size: 2.3rem;
+    margin: 0 0 1.5rem 0;
 }
 
 h1,
@@ -54,12 +58,18 @@ h5,
 h6 {
     font-family: 'Muli', Helvetica, sans-serif, monospace;
     color: #0c248f;
-    margin: 0 0 1rem 0;
     padding: 0;
 }
 
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1rem 0;
+}
+
 a {
-    color: #ccc;
+    color: $color-gray;
     text-decoration: none;
 }
 
@@ -69,14 +79,14 @@ p {
 }
 
 .btn {
-    color: #0c248f;
+    color: $color-gray;
     padding: .5rem .8rem;
-    border: 1px solid #0c248f;
+    border: 1px solid $color-gray;
     border-radius: 4px;
 }
 
 section {
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
 }
 
 .container {
@@ -106,6 +116,9 @@ section {
     text-align: center;
 }
 .text-left {
+    text-align: left;
+}
+.text-right {
     text-align: right;
 }
 
@@ -128,8 +141,12 @@ section {
     margin-right: 1rem;
 }
 
+.no-padding {
+    padding: 0;
+}
+
 img.img-rounded {
-    border-radius: 100%;
+    clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);
 }
 
 .section-header {
@@ -158,7 +175,9 @@ img.img-rounded {
 .space-between {
     justify-content: space-between;
 }
-
+.flex-end {
+    justify-content: flex-end;
+}
 @media only screen and (max-width: 768px) {
     .flex-row {
          flex-direction: column;
@@ -201,27 +220,26 @@ main {
     .welcome-wrapper {
         max-width: 80%;
         margin: 0 auto;
-        padding: 0 2rem;
-    
+        padding-left: 2rem;
+        padding-right: 2rem;
+
         .landing-text {
             max-width: 50%;
             flex-direction: column;
             justify-content: center;
 
-            h2 {
-                font-size: 2rem;
-                margin-bottom: .5rem;
-            }
             p {
                 font-size: 1.3rem;
                 line-height: 1.8rem;
             }
         }
         .landing-image {
-            transform: rotate(5deg);
+            transform: rotate(0deg);
 
             img {
-                max-width: 250px;
+                max-width: 225px;
+                border-radius: 2px;
+
             }
         }
     }
@@ -234,8 +252,8 @@ main {
             justify-content: flex-end;
 
             .services-title {
-                margin: 0 20% 0 0;
-                flex: 0 1 60%;
+                margin: 0 10% 0 0;
+                flex: 0 1 10%;
 
                 img {
                     max-width: 250px;
@@ -247,8 +265,28 @@ main {
             }
 
             .services-text {
-                flex: 0 1 40%;
+                flex: 0 1 80%;
+
+                .services-col {
+                    padding-right: 2rem;
+                    li {
+                        font-size: 1.2rem;
+                        line-height: 2rem;
+                    }
+                }
             }
+        }
+    }
+
+    .tools {
+        max-width: 90%;
+        .tool {
+            padding: 1rem;
+            margin: .5rem;
+            font-weight: bold; 
+            white-space: nowrap;
+           /*  box-shadow: 0px 1px 1px $color-gray; */
+            border-radius: 1px;
         }
     }
 }

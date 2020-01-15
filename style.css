@@ -5,6 +5,7 @@
 
 
 Maybe try to make a linear gradient for the page going center to give a lil texture */
+/* ===== Color Variables ====== */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -42,6 +43,7 @@ h1 {
 
 h2 {
   font-size: 2.3rem;
+  margin: 0 0 1.5rem 0;
 }
 
 h1,
@@ -52,12 +54,18 @@ h5,
 h6 {
   font-family: 'Muli', Helvetica, sans-serif, monospace;
   color: #0c248f;
-  margin: 0 0 1rem 0;
   padding: 0;
 }
 
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1rem 0;
+}
+
 a {
-  color: #ccc;
+  color: #444;
   text-decoration: none;
 }
 
@@ -67,14 +75,14 @@ p {
 }
 
 .btn {
-  color: #0c248f;
+  color: #444;
   padding: .5rem .8rem;
-  border: 1px solid #0c248f;
+  border: 1px solid #444;
   border-radius: 4px;
 }
 
 section {
-  padding: 5rem 0;
+  padding: 0 0 5rem 0;
 }
 
 .container {
@@ -105,6 +113,10 @@ section {
 }
 
 .text-left {
+  text-align: left;
+}
+
+.text-right {
   text-align: right;
 }
 
@@ -128,8 +140,13 @@ section {
   margin-right: 1rem;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 img.img-rounded {
-  border-radius: 100%;
+  -webkit-clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);
+          clip-path: polygon(4% 0, 100% 0, 96% 100%, 0% 100%);
 }
 
 .section-header {
@@ -167,6 +184,12 @@ img.img-rounded {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media only screen and (max-width: 768px) {
@@ -218,7 +241,8 @@ main {
 main .welcome-wrapper {
   max-width: 80%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 main .welcome-wrapper .landing-text {
@@ -232,23 +256,19 @@ main .welcome-wrapper .landing-text {
           justify-content: center;
 }
 
-main .welcome-wrapper .landing-text h2 {
-  font-size: 2rem;
-  margin-bottom: .5rem;
-}
-
 main .welcome-wrapper .landing-text p {
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
 
 main .welcome-wrapper .landing-image {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 main .welcome-wrapper .landing-image img {
-  max-width: 250px;
+  max-width: 225px;
+  border-radius: 2px;
 }
 
 main .services {
@@ -263,10 +283,10 @@ main .services .services-wrapper {
 }
 
 main .services .services-wrapper .services-title {
-  margin: 0 20% 0 0;
+  margin: 0 10% 0 0;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 60%;
-          flex: 0 1 60%;
+      -ms-flex: 0 1 10%;
+          flex: 0 1 10%;
 }
 
 main .services .services-wrapper .services-title img {
@@ -279,7 +299,29 @@ main .services .services-wrapper .services-title h1 {
 
 main .services .services-wrapper .services-text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
+      -ms-flex: 0 1 80%;
+          flex: 0 1 80%;
+}
+
+main .services .services-wrapper .services-text .services-col {
+  padding-right: 2rem;
+}
+
+main .services .services-wrapper .services-text .services-col li {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+main .tools {
+  max-width: 90%;
+}
+
+main .tools .tool {
+  padding: 1rem;
+  margin: .5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  /*  box-shadow: 0px 1px 1px $color-gray; */
+  border-radius: 1px;
 }
 /*# sourceMappingURL=style.css.map */
